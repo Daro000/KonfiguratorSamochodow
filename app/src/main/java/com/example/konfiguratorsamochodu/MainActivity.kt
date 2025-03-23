@@ -48,6 +48,7 @@ class MainActivity : AppCompatActivity() {
             val skorzaneSiedzenia = if (skorzaneCheckBox.isChecked) "Skórzane siedzenia" else "Brak skórzanych siedzeń"
             val summary = "Model: $selectedModel\nOpcje: $klimatyzacja, $skorzaneSiedzenia"
             summaryTextView.text = summary
+
         }
 
         }
