@@ -26,5 +26,28 @@
         android:textSize="18sp"
         android:padding="10dp" />
 
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/sedan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sedan" />
+
+        <RadioButton
+            android:id="@+id/suv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SUV" />
+
+        <RadioButton
+            android:id="@+id/hatchback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hatchback" />
+    </RadioGroup>
 
 </LinearLayout>
