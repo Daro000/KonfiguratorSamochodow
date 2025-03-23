@@ -50,4 +50,29 @@
             android:text="Hatchback" />
     </RadioGroup>
 
+    <ImageView
+        android:id="@+id/carImage"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/sedan" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Wybierz dodatkowe opcje:"
+        android:textSize="18sp"
+        android:padding="10dp" />
+
+    <CheckBox
+        android:id="@+id/klimatyzacja"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Klimatyzacja" />
+
+    <CheckBox
+        android:id="@+id/skorzane_siedzenia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Skórzane siedzenia" />
 </LinearLayout>
