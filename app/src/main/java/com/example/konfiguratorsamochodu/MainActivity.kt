@@ -28,6 +28,27 @@ class MainActivity : AppCompatActivity() {
         val submitButton = findViewById<Button>(R.id.submitButton)
         val summaryTextView = findViewById<TextView>(R.id.summary)
 
+        radioGroup.setOnCheckedChangeListener { _, checkedId ->
+            when (checkedId) {
+                R.id.sedan -> carImage.setImageResource(R.drawable.sedan)
+                R.id.suv -> carImage.setImageResource(R.drawable.suv)
+                R.id.hatchback -> carImage.setImageResource(R.drawable.hatchback)
+            }
+        }
 
-    }
+        submitButton.setOnClickListener {
+            val selectedModel = when (radioGroup.checkedRadioButtonId) {
+                R.id.sedan -> "Sedan"
+                R.id.suv -> "SUV"
+                R.id.hatchback -> "Hatchback"
+                else -> "Brak modelu"
+            }
+
+            val klimatyzacja = if (klimatyzacjaCheckBox.isChecked) "Klimatyzacja" else "Brak klimatyzacji"
+            val skorzaneSiedzenia = if (skorzaneCheckBox.isChecked) "Skórzane siedzenia" else "Brak skórzanych siedzeń"
+            val summary = "Model: $selectedModel\nOpcje: $klimatyzacja, $skorzaneSiedzenia"
+            summaryTextView.text = summary
+        }
+
+        }
 }
